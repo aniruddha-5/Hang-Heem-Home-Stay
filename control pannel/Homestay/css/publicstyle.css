@@ -1,0 +1,52 @@
+.about{
+    background: gray;
+}
+body{
+    overflow-x: hidden;
+  }
+  body .blogpost{
+      background-color: #f5f5f5;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      overflow: hidden;
+  }
+  .posttitle{
+      font-size: 3rem;
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+  }
+
+
+
+
+
+.nav-item.nav-link a{
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.nav-item{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#footer{
+    padding: 10px;
+    border-top: 1px solid black;
+    color: #eeeeee;
+    background-color: #211f22;
+    text-align: center;
+}
+.about h1{
+    padding-top:5rem;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.about h4{
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    justify-content: right;
+}

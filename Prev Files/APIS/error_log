@@ -1,0 +1,15 @@
+[12-Apr-2020 19:28:28 UTC] PHP Notice:  Undefined index: categoryid in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 10
+[12-Apr-2020 19:28:28 UTC] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 15
+[12-Apr-2020 20:43:41 UTC] PHP Notice:  Undefined index: categoryid in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 10
+[12-Apr-2020 20:43:41 UTC] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 15
+[12-Apr-2020 20:43:49 UTC] PHP Notice:  Undefined index: categoryid in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 10
+[12-Apr-2020 20:43:49 UTC] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 15
+[13-Apr-2020 10:20:46 UTC] PHP Notice:  Undefined index: categoryid in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 10
+[13-Apr-2020 10:20:46 UTC] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 15
+[13-Apr-2020 10:31:14 UTC] PHP Notice:  Undefined index: categoryid in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 10
+[13-Apr-2020 10:31:14 UTC] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 15
+[05-May-2020 19:05:48 UTC] PHP Notice:  Undefined index: categoryid in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 10
+[05-May-2020 19:05:48 UTC] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 15
+[05-May-2020 19:05:59 UTC] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 15
+[05-May-2020 19:07:05 UTC] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/obh9jcswa7uc/public_html/APIs/galleryImage.php on line 15
+[16-Sep-2020 13:02:06 UTC] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/obh9jcswa7uc/public_html/APIs/galleryCategory.php on line 12

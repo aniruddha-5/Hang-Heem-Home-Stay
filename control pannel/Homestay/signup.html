@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Create New User</title>
+
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+    <body class="h-100">
+        <div class="container-fluid full-bg h-100">
+           <div class="container h-100">
+               <div class="row no-margin h-100">
+                   <div class="bg-layer d-flex col-md-4">
+                        <div class="login-box row">
+                            <h3>User Registeration</h3>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Full Name" id="name" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            
+                             <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Password" id="password1" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Repeat Password" id="password2" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+
+                            <button class="btn btn-success" id="account">Create Account</button>
+                            
+                            
+                        </div>
+                    </div>    
+               </div>
+              
+               
+           </div>
+            
+        </div>
+    </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>        
+<script src="assets/js/script.js"></script>
+<script>
+  let name = document.getElementById('name');
+  let password1 = document.getElementById('password1');
+  let password2 = document.getElementById('password2');
+  let account = document.getElementById('account');
+  
+  account.addEventListener('click',()=>{
+
+    if(name.value=="" || password1.value=="" || password2.value==""){
+      swal("Invalid User Information. Please Re-Fill");
+    }
+    else if(password2.value!=password1.value){
+      swal("Password Does Not Match");
+    }
+    else{
+      let flag="false";
+      axios.get(`./WBDocumentsAPis/signin.php`)
+      .then((resp)=>{
+        let datas = resp.data;
+        datas.map((data)=>{
+          console.log(data.username);
+          if(data.username==name.value){
+           
+            flag="true";
+          }
+        });
+        // console.log(flag);
+        if(flag=="true"){
+          swal("This Username have Already registered.");
+        }
+        else{
+          alert("Sucessfull");
+          axios.get(`./WBDocumentsAPis/login.php?id=${name.value}&pass=${password1.value}`)
+          .then((resp)=>{
+            // console.log(resp);
+          })
+          
+        }
+      })
+      
+      // if(flag==1){
+      //   alert("This Username have Already registered.")
+      // }
+      // else{
+      //     alert("Sucessfull");
+      //     axios.get(`http://localhost/phpcms/WBproject/WBDocumentsAPis/login.php?id=${name.value}&pass=${password1.value}`)
+      //     .then((resp)=>{
+      //       // console.log(resp);
+      //     })
+      //     window.location = "login.html";
+      //   }
+    }
+
+  })
+
+let a = [
+    {
+        name: "BANKURA UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://www.bankurauniv.ac.in/"
+    },
+    {
+        name: "BIDHAN CHANDRA KRISHI VISWA VIDYALAYA", category: "STATE AIDED UNIVERSITY", url: "bckv.edu.in"
+    },
+    {
+        name: "COOCH BEHAR PANCHANAN BARMA UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://cbpbu.ac.in/"
+    },
+    {
+        name: "DIAMOND HARBOUR WOMEN�S UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://dhwu.ac.in/"
+    },
+    {
+        name: "GOUR BANGA UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://www.ugb.ac.in/"
+    },
+    {
+        name: "JADAVPUR UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://www.jaduniv.edu.in/"
+    },
+    {
+        name: "KAZI NAZRUL UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://www.knuedu.in/"
+    },
+    {
+        name: "MAULANA ABUL KALAM AZAD UNIVERSITY OF TECHNOLOGY", category: "STATE AIDED UNIVERSITY", url: "http://www.wbut.ac.in/"
+    },
+    {
+        name: "NETAJI SUBHAS OPEN UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://www.wbnsou.ac.in/"
+    },
+    {
+        name: "NORTH BENGAL UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://www.nbu.ac.in/"
+    },
+    {
+        name: "PRESIDENCY UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://www.presiuniv.ac.in/web/"
+    },
+    {
+        name: "RABINDRA BHARATI UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://rbu.ac.in/"
+    },
+    {
+        name: "RAIGANJ UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://www.raiganjcollege.ac.in/"
+    },
+    {
+        name: "RANI RASHMONI UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "n/a"
+    },
+    {
+        name: "SANSKRIT UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "n/a"
+    },
+    {
+        name: "SIDHO-KANHO UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://skbu.ac.in/"
+    },
+    {
+        name: "THE WEST BENGAL NATIONAL UNIVERSITY OF JURIDICAL SCIENCES", category: "STATE AIDED UNIVERSITY", url: "www.nujs.edu"
+    },
+    {
+        name: "UNIVERSITY OF   BURDWAN", category: "STATE AIDED UNIVERSITY", url: "http://www.buruniv.ac.in/"
+    },
+    {
+        name: "UNIVERSITY OF CALCUTTA", category: "STATE AIDED UNIVERSITY", url: "http://www.caluniv.ac.in/"
+    },
+    {
+        name: "UNIVERSITY OF KALYANI", category: "STATE AIDED UNIVERSITY", url: "http://www.klyuniv.ac.in/"
+    },
+    {
+        name: "UTTAR BANGA KRISHI VISWAVIDYALAYA", category: "STATE AIDED UNIVERSITY", url: "www.ubkv.ac.in"
+    },
+    {
+        name: "VIDYASAGAR UNIVERSITY", category: "STATE AIDED UNIVERSITY", url: "http://vidyasagar.ac.in/Default.aspx"
+    },
+    {
+        name: "WEST BENGAL STATE UNIVERSITY, BARASAT", category: "STATE AIDED UNIVERSITY", url: "http://www.wbsubregistration.org/"
+    },
+    {
+        name: "WEST BENGAL UNIVERSITY OF ANIMAL & FISHERY SCIENCES", category: "STATE AIDED UNIVERSITY", url: "wbuafscl.ac.in"
+    },
+    {
+        name: "WEST BENGAL UNIVERSITY OF HEALTH SCIENCES", category: "STATE AIDED UNIVERSITY", url: "wbuhs.ac.in"
+    },
+    {
+        name: "WEST BENGAL UNIVERSITY OF TEACHERS� TRAINING, EDUCATION PLANNING AND ADMINISTRATION", category: "STATE AIDED UNIVERSITY", url: "http://www.wbuttepa.ac.in/"
+    },
+    {
+        name: "ALIGARH MUSLIM UNIVERSITY, AMU SPECIAL CENTRE (MURSHIDABAD), (central university)", category: "CENTRAL UNIVERSITY", url: "ajafar.mbd@amu.ac.in"
+    },
+    {
+        name: "INDRIGHANDHI NATIONAL OPEN UNIVERSITY (central university)", category: "CENTRAL UNIVERSITY", url: "www.ignou.ac.in"
+    },
+    {
+        name: "VISVA-BHARATI (central university)", category: "CENTRAL UNIVERSITY", url: "visvabharati.ac.in"
+    },
+    {
+        name: "ADAMAS UNIVERSITY", category: "PRIVATE UNIVERSITY", url: "n/a"
+    },
+    {
+        name: "AMITY UNIVERSITY", category: "PRIVATE UNIVERSITY", url: "http://www.amity.edu/"
+    },
+    {
+        name: "BRAINWARE UNIVERSITY", category: "PRIVATE UNIVERSITY", url: "http://www.brainwaretechnologies.org/"
+    },
+    {
+        name: "JIS UNIVERSITY", category: "PRIVATE UNIVERSITY", url: "http://jisuniversity.ac.in/"
+    },
+    {
+        name: "NEOTIA UNIVERSITY", category: "PRIVATE UNIVERSITY", url: "http://www.tnu.in/"
+    },
+    {
+        name: "SEACOMS SKILLS UNIVERSITY", category: "PRIVATE UNIVERSITY", url: "http://www.seacomskillsuniversity.org/"
+    },
+    {
+        name: "SISTER NEVEDITA UNIVERSITY", category: "PRIVATE UNIVERSITY", url: "https://snuniv.ac.in/"
+    },
+    {
+        name: "ST. XAVIER�S UNIVERSITY", category: "PRIVATE UNIVERSITY", url: "http://www.sxuk.edu.in/"
+    },
+    {
+        name: "TECHNO INDIA UNIVERSITY", category: "PRIVATE UNIVERSITY", url: "http://www.technoindiauniversity.ac.in/"
+    },
+    {
+        name: "UNIVERSITY OF ENGINEERING AND MANAGEMENT", category: "PRIVATE UNIVERSITY", url: "http://iem.edu.in/"
+    },
+    {
+        name: "BOSE INSTITUTE", category: "INSTITUTE", url: "n/a"
+    },
+    {
+        name: "CENTRE FOR STUDIES IN SOCIAL SCIENCE CALCUTTA", category: "INSTITUTE", url: "https://www.cssscal.org/"
+    },
+    {
+        name: "IISER- KOLKATA (MOHANPUR)", category: "INSTITUTE", url: "www.iiser.kol.ac.in"
+    },
+    {
+        name: "INDIAN ASSOCIATION FOR THE CULTIVATION OF SCIENCE", category: "INSTITUTE", url: "http://www.iacs.res.in/"
+    },
+    {
+        name: "INDIAN INSTITUTE OF CHEMICAL BIOLOGY", category: "INSTITUTE", url: "https://www.iicb.res.in/"
+    },
+    {
+        name: "INDIAN INSTITUTE OF ENGINEERING SCIENCE AND TECHNOLOGY, SHIBPUR", category: "INSTITUTE", url: "https://www.iiests.ac.in/"
+    },
+    {
+        name: "INDIAN INSTITUTE OF MANAGEMENT CALCUTTA", category: "INSTITUTE", url: "https://www.iimcal.ac.in/"
+    },
+    {
+        name: "INDIAN INSTITUTE OF TECHNOLOGY, KHARAGPUR", category: "INSTITUTE", url: "http://www1.iitkgp.ac.in/"
+    },
+    {
+        name: "INDIAN STATISTICAL INSTITUTE, KOLKATA", category: "INSTITUTE", url: "https://www.isical.ac.in/"
+    },
+    {
+        name: "NATIONAL INSTITUTE OF TECHNOLOGY, DURGAPUR", category: "INSTITUTE", url: "https://nitdgp.ac.in/"
+    },
+    {
+        name: "RAMAKRISHNA MISSION VIVEKANANDA EDUCATIONAL AND RESEARCH INSTITUTE", category: "INSTITUTE", url: "http://rkmvu.ac.in/"
+    },
+    {
+        name: "S. N. BOSE NATIONAL CENTRE FOR BASIC SCIENCE", category: "INSTITUTE", url: "https://www.bose.res.in/"
+    },
+    {
+        name: "SAHA INSTTITUTE OF NUCLEAR PHYSICS", category: "INSTITUTE", url: "http://www.saha.ac.in/"
+    }
+]
+
+
+a.map((item)=>{
+    axios.get(`http://dipakole.in/WBAdmin/WBDocumentsAPis/universityList.php?name=${item.name}`)
+          .then((resp)=>{
+            console.log(resp);
+          })
+
+
+
+})
+</script>
+
+
+</html>

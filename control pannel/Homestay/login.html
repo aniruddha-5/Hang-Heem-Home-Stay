@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Log In</title>
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+  <body class="h-100">
+        <div class="container-fluid full-bg h-100">
+           <div class="container h-100">
+               <div class="row no-margin h-100">
+                   <div class="bg-layer d-flex col-md-4">
+                        <div class="login-box row">
+                            <h3>User login</h3>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Username" id="name" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                              </div>
+                              <input type="password" class="form-control" placeholder="Password" id="pass" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+
+                            
+                            <p>
+                            <label class="container">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>Remember me
+                            </label>
+                            forget password ?</p>
+                            <button class="btn btn-success" id="login">Click to Login</button>
+                            
+                            
+                        </div>
+                    </div>    
+               </div>
+              
+               
+           </div>
+        </div>
+    </body>
+  
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>        
+<script src="assets/js/script.js"></script>
+<script>
+
+let login = document.getElementById('login');
+let name = document.getElementById('name');
+let pass = document.getElementById('pass');
+
+console.log(name.value);
+window.addEventListener('DOMContentLoaded',()=>{
+  sessionStorage.setItem('login','false');
+  sessionStorage.setItem('username','');
+})
+login.addEventListener('click',()=>{
+  console.log("Clicked");
+  if(name.value=='' || pass.value==''){
+    swal("Invalid Input");
+  }
+  else{
+  axios.get(`./WBDocumentsAPis/signin.php`)
+  .then((res)=>{
+    let datas =res.data;
+
+    let flag= 0;
+    
+    datas.map((data)=>{
+      // console.log(data.username);
+      
+      if(data.username==name.value){
+        // console.log(data.pass);
+        if(data.pass==pass.value){
+          flag=1;
+        }
+        
+      }
+    })
+
+    if(flag==1){
+      sessionStorage.setItem('login','true');
+      sessionStorage.setItem('username',name.value);
+      swal({
+       title: "Successfully log in!",
+      text: `Welcome,${sessionStorage.getItem('username')}`,
+      icon: "success",
+      });
+      setTimeout(() => {
+        window.location = 'dashboard.html';
+      }, 1000);
+      // window.location = "dashboard.html";
+      
+    }
+    else{
+      swal("Invalid Username and Password");
+    }
+
+  })
+}
+})
+
+      
+
+  
+</script>
+
+</html>

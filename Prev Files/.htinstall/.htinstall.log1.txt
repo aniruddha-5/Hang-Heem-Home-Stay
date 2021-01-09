@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Install</title>
+
+	<link href="./../../adm/style/admin.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<body class="ltr nojs">
+<div id="wrap">
+	<div id="page-header">
+		<h1>Installation Panel</h1>
+		<p id="skip"><a href="#acp">Skip to content</a></p>
+				<form method="post" action="#" id="language_selector">
+			<fieldset class="nobg">
+				<label for="language">Select language:</label>
+				<select  id="language" name="language">
+										<option value="en">British English</option>
+									</select>
+				<input class="button1" type="submit" id="change_lang" name="change_lang" value="Change" />
+			</fieldset>
+		</form>
+			</div>
+
+	<div id="page-body">
+		<div id="tabs">
+			<ul>
+								<li class="tab"><a href="/install/app.php/">Overview</a></li>
+								<li class="tab activetab"><a href="/install/app.php/install">Install</a></li>
+							</ul>
+		</div>
+
+		<div id="acp">
+			<div id="content">
+				<div id="menu">
+					<div class="menu-block no-header">
+						<ul>
+																					<li id="activemenu"><span id="installer-stage-introduction">Introduction</span></li>
+														<li><span id="installer-stage-requirements">Check requirements</span></li>
+														<li><span id="installer-stage-obtain_data">Set installation data</span></li>
+														<li><span id="installer-stage-install">Installing phpBB</span></li>
+													</ul>
+					</div>
+				</div>
+
+				<div id="main" class="install-body">
+					<div class="main">
+<h1>Welcome to Installation</h1>
+<p>With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.</p>
+<form id="install_install" method="post" action="/install/app.php/install">
+	<fieldset class="submit-buttons">
+		<legend>Submit</legend>
+		<input class="button1" name="install" type="submit" value="Install" />
+	</fieldset>
+</form>
+					</div>
+				</div><!-- /#main -->
+			</div>
+		</div><!-- /#acp -->
+	</div>
+
+	<div id="page-footer">
+		<div class="copyright">
+					</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+<!--
+installLang = {
+	title: 'The\u0020installer\u0020detected\u0020a\u0020timeout',
+	msg: 'The\u0020installer\u0020has\u0020detected\u0020a\u0020timeout,\u0020you\u0020may\u0020try\u0020to\u0020refresh\u0020the\u0020page,\u0020which\u0020may\u0020lead\u0020to\u0020data\u0020corruption.\u0020We\u0020suggest\u0020that\u0020you\u0020either\u0020increase\u0020your\u0020timeout\u0020settings\u0020or\u0020try\u0020to\u0020use\u0020the\u0020CLI.'
+};
+//-->
+</script>
+
+<script type="text/javascript" src="./../../adm/../assets/javascript/jquery.min.js"></script>
+<script type="text/javascript" src="./../../adm/../assets/javascript/core.js?assets_version="></script>
+<script src="./../../assets/javascript/installer.js?assets_version="></script>
+<script src="./../../adm/style/admin.js?assets_version="></script>
+
+
+</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'sg2plcpnl0203'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="./fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="py-4 bg-warning text-white" id="main-header">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-1">
+                <a href="rootadmin.html" class="btn btn-outline-dark">
+                    <h1><i class="fa fa-arrow-left"></i></h3>
+                </a>
+              </div>
+              <div class="col-md-6">
+                  <h1 ><i class="fa fa-bookmark"></i> Catagories</h1>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <!-- Small Section -->
+
+  
+
+  <!-- Catagories Section -->
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-center bg-success text-white mb-3">
+                    <div class="card-body">
+                        <h3>Constitution</h3>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a href="status.php"onclick="clickBtn1('Constitution')" id="constitution" class="btn btn-outline-light btn-sm" >VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-primary text-white mb-3">
+                    <div class="card-body">
+                        <h3>Organization</h3>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a href="organization.html" id="organization" class="btn btn-outline-light btn-sm">VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-danger text-white mb-3">
+                    <div class="card-body">
+                        <h3>Govt Orders</h3>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a onclick="clickBtn1('Govt Orders')" href="status.php" id="govtOrders" class="btn btn-outline-light btn-sm">VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-info text-white mb-3">
+                    <div class="card-body">
+                        <h3>Publications</h3>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a href="publication.html" id="publication" class="btn btn-outline-light btn-sm">VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-primary text-white mb-3">
+                    <div class="card-body">
+                        <h3>Annual Report</h3>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a onclick="clickBtn1('Annual Report')" id="annualReport" href="annualReport.php" class="btn btn-outline-light btn-sm">VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-success text-white mb-3">
+                    <div class="card-body">
+                        <h3>Gallery</h3>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a href="gallery.php" id="gallery" class="btn btn-outline-light btn-sm">VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-primary text-white mb-3">
+                    <div class="card-body">
+                        <h3>Govt Colleges</h3>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a onclick="clickBtn1('Govt Colleges')" href="govtCollege.php" id="govtCollege" class="btn btn-outline-light btn-sm">VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-success text-white mb-3">
+                    <div class="card-body">
+                        <h3>Archive</h3>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a onclick="clickBtn1('Archive')" href="status.php" id="archive" class="btn btn-outline-light btn-sm">VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-danger text-white mb-3">
+                    <div class="card-body">
+                        <h3>Notices</h3>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a onclick="clickBtn1('Notices')" href="status.php" id="notices" class="btn btn-outline-light btn-sm">VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-success text-white mb-3">
+                    <div class="card-body">
+                        <h4>Carousel Images</h4>
+                        <h4 class="display-4">
+                            <i class="fas fa-folder"></i> 7
+                        </h4>
+                        <a onclick="clickBtn1('Carousel Images')" href="carousel.php" id="carousel" class="btn btn-outline-light btn-sm">VIEW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        let name = sessionStorage.getItem('username');
+        $('#year').text(new Date().getFullYear());
+        window.addEventListener('DOMContentLoaded',()=>{
+            axios.get(`./WBDocumentsAPis/permission.php?name=${name}`)
+            .then((res)=>{
+                let data = res.data[0];
+                console.log(data);
+                if(data.Constitution=='False'){
+                document.getElementById('constitution').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                if(data.organization=='False'){
+                document.getElementById('organization').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                if(data.govtorders=='False'){
+                document.getElementById('govtOrders').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                if(data.publication=='False'){
+                document.getElementById('publication').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                if(data.annualreport=='False'){
+                document.getElementById('annualReport').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                if(data.gallery=='False'){
+                document.getElementById('gallery').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                if(data.govtcolleges=='False'){
+                document.getElementById('govtCollege').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                if(data.archive=='False'){
+                document.getElementById('archive').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                if(data.notice=='False'){
+                document.getElementById('notices').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                if(data.carousel=='False'){
+                document.getElementById('carousel').className = 'disabled btn btn-outline-light btn-sm';
+                }
+                
+            })
+        })
+        clickBtn1 = (name)=>{
+            // console.log(name);
+            sessionStorage.setItem('catagory',name);
+        }
+    </script>
+</body>
+</html>
