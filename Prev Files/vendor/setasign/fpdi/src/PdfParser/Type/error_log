@@ -1,3 +1,0 @@
-[27-Aug-2020 09:24:05 UTC] PHP Fatal error:  Class 'setasign\Fpdi\PdfParser\PdfParserException' not found in /home/obh9jcswa7uc/public_html/vendor/setasign/fpdi/src/PdfParser/Type/PdfTypeException.php on line 19
-[27-Aug-2020 09:24:09 UTC] PHP Fatal error:  Class 'setasign\Fpdi\PdfParser\PdfParserException' not found in /home/obh9jcswa7uc/public_html/vendor/setasign/fpdi/src/PdfParser/Type/PdfTypeException.php on line 19
-[27-Aug-2020 09:24:14 UTC] PHP Fatal error:  Class 'setasign\Fpdi\PdfParser\PdfParserException' not found in /home/obh9jcswa7uc/public_html/vendor/setasign/fpdi/src/PdfParser/Type/PdfTypeException.php on line 19
